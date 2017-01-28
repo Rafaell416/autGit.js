@@ -10,8 +10,7 @@ if (exec(ping) == 1) {
     cloud();
 } else {
 	console.log('You do not Got it');
-	exec(local());
-	exit(1);
+	local();
 }
 
 
