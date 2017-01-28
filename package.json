@@ -1,0 +1,26 @@
+{
+  "name": "autgit.js",
+  "version": "0.0.1",
+  "description": "Automatized tool for basic Git iteration",
+  "main": "git.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafaell416/autGit.js.git"
+  },
+  "keywords": [
+    "git",
+    "node",
+    "shell.",
+    "scripting",
+    "auth"
+  ],
+  "author": "Rafaell Villarreal <rvillarreal416@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rafaell416/autGit.js/issues"
+  },
+  "homepage": "https://github.com/Rafaell416/autGit.js#readme"
+}
