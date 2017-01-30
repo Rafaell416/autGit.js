@@ -25,13 +25,13 @@ function local () {
 }
 
 function cloud () {
+	local();
+	question();
+}
+
+function question () {
 	var ask = '¿Quieres enviarlo a GitHub?, (S/N)';
-	prompt.start();
-	prompt.get(['comentario'], function (err, result) {
-	  if (err) { return onErr(err); }
-	  exec(comm + result.comentario);
-	});
-	
+    prompt.start();
 	prompt.get([ask], function (err, result) {
 	  if (err) { return onErr(err); }
 	  if (result.ask == S || s) {
