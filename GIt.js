@@ -13,9 +13,6 @@ if (exec(ping) == 1) {
 	local();
 }
 
-
-
-
 function local () {
 	prompt.start();
 
@@ -27,6 +24,10 @@ function local () {
 
 function cloud () {
 	prompt.start();
+
+	prompt.get(['¿Quieres enviarlo a GitHub?, (S/N)'], function (err, result){
+		if (err) {return onErr(err);}
+	})
 
 	prompt.get(['comentario'], function (err, result) {
 	  if (err) { return onErr(err); }
@@ -40,3 +41,5 @@ function onErr(err) {
   console.log(err);
   return 1;
 }
+
+
