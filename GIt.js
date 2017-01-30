@@ -6,10 +6,10 @@ var prompt = require('prompt');
 
 
 if (exec(ping) == 1) {
-	console.log('You Got it');
+	console.log('You are online');
     cloud();
 } else {
-	console.log('You do not Got it');
+	console.log('You are offline');
 	local();
 }
 
@@ -24,15 +24,20 @@ function local () {
 
 function cloud () {
 	prompt.start();
+	var ask = '¿Quieres enviarlo a GitHub?, (S/N)';
 
-	prompt.get(['¿Quieres enviarlo a GitHub?, (S/N)'], function (err, result){
+	prompt.get(['comentario'], function (err, result){
 		if (err) {return onErr(err);}
+		exec(comm + result.comentario);
 	})
 
-	prompt.get(['comentario'], function (err, result) {
+	prompt.get([ask], function (err, result) {
 	  if (err) { return onErr(err); }
-	  exec(comm + result.comentario);
-	  exec(upload);
+	  if (result.ask == S || s) {
+ 		exec(upload);
+	  }else {
+        exit(1);
+	  }
 	});
 }
 
