@@ -38,6 +38,7 @@ function cloud () {
 	});
 }
 
+
 // This is the function  that deal with errors 
 //  Esta es la funcion que se encarga de manejar los errores
 function onErr(err) {
